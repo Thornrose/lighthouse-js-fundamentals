@@ -195,40 +195,64 @@
 // console.log(howManyHundreds(99), "=?", 0);
 // console.log(howManyHundreds(0), "=?", 0);
 
-const calculateRectangleArea = function(length, width) {
-  if (length <= 0 || width <= 0) {
-    return;
-  } else {
-    return length * width;
-  }
-};
+// const calculateRectangleArea = function(length, width) {
+//   if (length <= 0 || width <= 0) {
+//     return;
+//   } else {
+//     return length * width;
+//   }
+// };
 
 
-const calculateTriangleArea = function(base, height) {
-  if (base <= 0 || height <= 0){
-    return;
-  } else {
-    return base * height / 2;
-  }
-};
+// const calculateTriangleArea = function(base, height) {
+//   if (base <= 0 || height <= 0){
+//     return;
+//   } else {
+//     return base * height / 2;
+//   }
+// };
 
 
-const calculateCircleArea = function(radius) {
-  if (radius <= 0) {
-    return;
-  } else {
-    return Math.PI * (radius * radius);
-  }
-};
+// const calculateCircleArea = function(radius) {
+//   if (radius <= 0) {
+//     return;
+//   } else {
+//     return Math.PI * (radius * radius);
+//   }
+// };
 
-console.log(calculateRectangleArea(10, 5));     // should print 50
-console.log(calculateRectangleArea(1.5, 2.5));  // should print 3.75
-console.log(calculateRectangleArea(10, -5));    // should print undefined
+// console.log(calculateRectangleArea(10, 5));     // should print 50
+// console.log(calculateRectangleArea(1.5, 2.5));  // should print 3.75
+// console.log(calculateRectangleArea(10, -5));    // should print undefined
 
-console.log(calculateTriangleArea(10, 5)); // should print 25
-console.log(calculateTriangleArea(3, 2.5)); // should print 3.75
-console.log(calculateTriangleArea(10, -5)); // should print undefined
+// console.log(calculateTriangleArea(10, 5)); // should print 25
+// console.log(calculateTriangleArea(3, 2.5)); // should print 3.75
+// console.log(calculateTriangleArea(10, -5)); // should print undefined
 
-console.log(calculateCircleArea(10)); // should print 314.159...
-console.log(calculateCircleArea(3.5)); // should print 38.484...
-console.log(calculateCircleArea(-1)); // should print undefined
+// console.log(calculateCircleArea(10)); // should print 314.159...
+// console.log(calculateCircleArea(3.5)); // should print 38.484...
+// console.log(calculateCircleArea(-1)); // should print undefined
+
+
+// let donuts = ["glazed", "powdered", "sprinkled"];
+// console.log(donuts.length);
+
+// donuts.push("chocolate");
+
+// let hasEnoughPlayers = function(count) {
+//   let check = count.length;
+//   if (check === 7) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// let team = ["oliver", "angela", "kate", "alicia"]
+// console.log(hasEnoughPlayers(team));
+
+const director = "Steven Spielberg";
+const films = ["Jaws", "Raiders of the Lost Ark", "A.I."];
+
+console.log("My Favorite " + director + " film is " + films[1]);
+
