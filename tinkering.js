@@ -251,8 +251,81 @@
 // let team = ["oliver", "angela", "kate", "alicia"]
 // console.log(hasEnoughPlayers(team));
 
-const director = "Steven Spielberg";
-const films = ["Jaws", "Raiders of the Lost Ark", "A.I."];
+// const director = "Steven Spielberg";
+// const films = ["Jaws", "Raiders of the Lost Ark", "A.I."];
 
-console.log("My Favorite " + director + " film is " + films[1]);
+// console.log("My Favorite " + director + " film is " + films[1]);
 
+
+// function range(start, end, step) {  
+//   const rangeResult = [];
+//   if (start === "" || end === "" || step === "" || start > end || step <= 0) { // THIS CHECK IS IMPORTANT
+//     return rangeResult;
+//   } else {
+//     for (let count = start; count <= end; count += step) {
+//       rangeResult.push(count);
+//     }
+//     return rangeResult;
+//   }
+// }
+
+// console.log(range(0, 10, 2));
+// console.log(range(10, 30, 5));
+// console.log(range(-5, 2, 3));
+
+
+
+// function lastIndexOf(newArray, num) {
+//   let lastIndex = -1;
+//   for (let i = 0; i < newArray.length; i++) {
+//     if (newArray[i] === num) {
+//       lastIndex = i;
+//     }
+//   }
+//   return lastIndex;
+// }
+
+// console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 1), "=?", 3);
+// console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 2), "=?", 4);
+// console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 3), "=?", -1);
+// console.log(lastIndexOf([ 5, 5, 5 ], 5), "=?", 2);
+// console.log(lastIndexOf([], 3), "=?", -1);
+
+
+// function concat(array1, array2) {
+//   const finalArray = [];
+//   for (let item of array1) {
+//     finalArray.push(item);
+//   }
+//   for (let item of array2) {
+//     finalArray.push(item);
+//   }
+//   return finalArray;
+// }
+
+// console.log(concat([ 1, 2, 3 ], [ 4, 5, 6 ]), "=?", [ 1, 2, 3, 4, 5, 6 ]);
+// console.log(concat([ 0, 3, 1 ], [ 9, 7, 2 ]), "=?", [ 0, 3, 1, 9, 7, 2 ]);
+// console.log(concat([], [ 9, 7, 2 ]), "=?", [ 9, 7, 2 ]);
+// console.log(concat([ 5, 10 ], []), "=?", [ 5, 10 ]);
+
+
+const umbrella = {
+  color: "black",
+  isOpen: false,
+  open: function() {
+    if (umbrella.isOpen === true) {
+      return "The umbrella is already opened!";
+    } else {
+      umbrella.isOpen = true;
+      return "Cheever opens the umbrella!"
+    }
+  },
+  close: function() {
+    if (umbrella.isOpen === false) {
+      return "The umbrella is already closed!";
+    } else {
+      umbrella.isOpen = false;
+      return "Julia closes the umbrella!";
+    }
+  }
+};
