@@ -309,23 +309,116 @@
 // console.log(concat([ 5, 10 ], []), "=?", [ 5, 10 ]);
 
 
-const umbrella = {
-  color: "black",
-  isOpen: false,
-  open: function() {
-    if (umbrella.isOpen === true) {
-      return "The umbrella is already opened!";
-    } else {
-      umbrella.isOpen = true;
-      return "Cheever opens the umbrella!"
+// const umbrella = {
+//   color: "black",
+//   isOpen: false,
+//   open: function() {
+//     if (umbrella.isOpen === true) {
+//       return "The umbrella is already opened!";
+//     } else {
+//       umbrella.isOpen = true;
+//       return "Cheever opens the umbrella!"
+//     }
+//   },
+//   close: function() {
+//     if (umbrella.isOpen === false) {
+//       return "The umbrella is already closed!";
+//     } else {
+//       umbrella.isOpen = false;
+//       return "Julia closes the umbrella!";
+//     }
+//   }
+// };
+
+
+// const smartGarbage = function(trash, bins) {
+//   if (trash === "waste") {
+//     bins.waste++;
+//   } else if (trash === "recycling") {
+//     bins.recycling++;
+//   } else if (trash === "compost") {
+//     bins.compost++;
+//   } else {
+//     return "That's not trash!";
+//   }
+//   return (bins);
+// }
+
+// smartGarbage('recycling', { waste: 4, recycling: 2, compost: 5 });
+
+
+// const carPassing = function(cars, speed) {
+//   if (speed > 0) {
+//     cars.push({
+//       time: Date.now(),
+//       speed: speed // this is the part i wasn't sure of, but it worked and was valid
+//     })
+//   } return cars;
+// };
+
+// const cars = [
+//   {
+//     time: 1568329654807,
+//     speed: 40
+//   },
+//   {
+//     time: 1568329821632,
+//     speed: 42
+//   },
+//   {
+//     time: 1568331115463,
+//     speed: 35
+//   }
+// ]
+
+// const speed = 38
+
+// carPassing(cars, speed);
+
+
+const judgeVegetable = function(vegetables, metric) {
+  let bestEntry = "";
+  let topScore = 0;
+  let ratingArray = [];
+  function compareNumbers(a, b) {
+    return a - b;
+  }
+  if (typeof(metric) === "string") {
+    for (let i = 0; i < vegetables.length; i++) {
+      ratingArray.push(vegetables[i][metric]);
     }
-  },
-  close: function() {
-    if (umbrella.isOpen === false) {
-      return "The umbrella is already closed!";
-    } else {
-      umbrella.isOpen = false;
-      return "Julia closes the umbrella!";
+    ratingArray.sort(compareNumbers);
+    ratingArray.reverse();
+    topScore = ratingArray[0];
+    for (let i = 0; i < vegetables.length; i++) {
+       if (vegetables[i][metric] === topScore) {
+        bestEntry = vegetables[i]["submitter"];
+       }
     }
   }
+  return bestEntry;
 };
+
+const vegetables = [
+  {
+    submitter: 'Old Man Franklin',
+    redness: 10,
+    plumpness: 5
+  },
+  {
+    submitter: 'Sally Tomato-Grower',
+    redness: 2,
+    plumpness: 8
+  },
+  {
+    submitter: 'Hamid Hamidson',
+    redness: 4,
+    plumpness: 3
+  }
+]
+
+const metric = 'plumpness';
+
+judgeVegetable(vegetables, metric);
+
+console.log(judgeVegetable(vegetables, metric));
