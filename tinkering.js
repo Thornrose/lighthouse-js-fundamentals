@@ -376,49 +376,55 @@
 // carPassing(cars, speed);
 
 
-const judgeVegetable = function(vegetables, metric) {
-  let bestEntry = "";
-  let topScore = 0;
-  let ratingArray = [];
-  function compareNumbers(a, b) {
-    return a - b;
-  }
-  if (typeof(metric) === "string") {
-    for (let i = 0; i < vegetables.length; i++) {
-      ratingArray.push(vegetables[i][metric]);
-    }
-    ratingArray.sort(compareNumbers);
-    ratingArray.reverse();
-    topScore = ratingArray[0];
-    for (let i = 0; i < vegetables.length; i++) {
-       if (vegetables[i][metric] === topScore) {
-        bestEntry = vegetables[i]["submitter"];
-       }
-    }
-  }
-  return bestEntry;
-};
+// const judgeVegetable = function(vegetables, metric) {
+//   let bestEntry = "";
+//   let topScore = 0;
+//   let ratingArray = [];
+//   function compareNumbers(a, b) {
+//     return a - b;
+//   }
+//   if (typeof(metric) === "string") {
+//     for (let i = 0; i < vegetables.length; i++) {
+//       ratingArray.push(vegetables[i][metric]);
+//     }
+//     ratingArray.sort(compareNumbers);
+//     ratingArray.reverse();
+//     topScore = ratingArray[0];
+//     for (let i = 0; i < vegetables.length; i++) {
+//        if (vegetables[i][metric] === topScore) {
+//         bestEntry = vegetables[i]["submitter"];
+//        }
+//     }
+//   }
+//   return bestEntry;
+// };
 
-const vegetables = [
-  {
-    submitter: 'Old Man Franklin',
-    redness: 10,
-    plumpness: 5
-  },
-  {
-    submitter: 'Sally Tomato-Grower',
-    redness: 2,
-    plumpness: 8
-  },
-  {
-    submitter: 'Hamid Hamidson',
-    redness: 4,
-    plumpness: 3
-  }
-]
+// const vegetables = [
+//   {
+//     submitter: 'Old Man Franklin',
+//     redness: 10,
+//     plumpness: 5
+//   },
+//   {
+//     submitter: 'Sally Tomato-Grower',
+//     redness: 2,
+//     plumpness: 8
+//   },
+//   {
+//     submitter: 'Hamid Hamidson',
+//     redness: 4,
+//     plumpness: 3
+//   }
+// ]
 
-const metric = 'plumpness';
+// const metric = 'plumpness';
 
-judgeVegetable(vegetables, metric);
+// judgeVegetable(vegetables, metric);
 
-console.log(judgeVegetable(vegetables, metric));
+// console.log(judgeVegetable(vegetables, metric));
+
+longestName = "chiever";
+console.log(longestName.length);
+
+
+console.log(longestName[2]);
