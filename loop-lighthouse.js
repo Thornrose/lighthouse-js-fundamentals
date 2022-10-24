@@ -1,9 +1,12 @@
-let output = "";
+const loopyLighthouse = ((range, multiples, words) => {
+  let output = "";
+  const concatWords = words[0] + words[1];
+  for (let num = range[0]; num <= range[1]; num++) {
+    output = (num % multiples[0] === 0) ? words[0] : num;
+    output = (num % multiples[1] === 0) ? words[1]  : output;
+    output = ((num % multiples[0] === 0) && (num % multiples[1] === 0)) ? concatWords : output;
+    console.log(output);
+  }
+});
 
-for (let num = 100; num <= 200; num++) {
-  output = (num % 3 === 0) ? "Loopy" : num;
-  output = (num % 4 === 0) ? "Lighthouse"  : output;
-  output = ((num % 3 === 0) && (num % 4 === 0)) ? "LoopyLighthouse" : output;
-  console.log(output);
-}
-
+loopyLighthouse([1, 20], [3, 5], ["Loopy", "Lighthouse"]);

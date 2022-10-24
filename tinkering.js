@@ -309,6 +309,30 @@
 // console.log(concat([ 5, 10 ], []), "=?", [ 5, 10 ]);
 
 
+function merge(array1, array2) { // really stuck on this
+  let finalArray = [];
+  const finalLength = array1.length + array2.length;
+  for (let i = 0; i < array1.length; i++) {
+    let currentItem = array1[i];
+    if (finalArray.length < finalLength) {
+      finalArray.push(currentItem);
+    }
+  }
+  for (let i = 0; i < array2.length; i++) {
+    let currentItem = array2[i];
+    if (finalArray.length < finalLength) {
+      finalArray.push(currentItem);
+    }
+  }
+
+  return finalArray;
+}
+
+console.log(merge([ 4, 5, 6 ], [ 1, 2, 3, 4 ]), "=?", [ 1, 2, 3, 4, 4, 5, 6 ]);
+console.log(merge([ 4 ], [ 2, 5, 8 ]), "=?", [ 2, 4, 5, 8 ]);
+console.log(merge([ 1, 2, 6 ], []), "=?", [ 1, 2, 6 ]);
+
+
 // const umbrella = {
 //   color: "black",
 //   isOpen: false,
@@ -423,8 +447,8 @@
 
 // console.log(judgeVegetable(vegetables, metric));
 
-longestName = "chiever";
-console.log(longestName.length);
+// longestName = "chiever";
+// console.log(longestName.length);
 
 
-console.log(longestName[2]);
+// console.log(longestName[2]);
